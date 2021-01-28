@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 
 namespace REST__ASP.NET_Web_API
 {
@@ -19,6 +16,16 @@ namespace REST__ASP.NET_Web_API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            config.Routes.MapHttpRoute(
+            name: "MyRoute",
+           routeTemplate: "api/{controller}/{year}/{month}/{day}",
+           defaults: new {
+               year= RouteParameter.Optional,
+               month = RouteParameter.Optional,
+               day = RouteParameter.Optional
+
+           }
+           );
         }
     }
 }
