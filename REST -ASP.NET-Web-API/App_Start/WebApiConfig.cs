@@ -16,16 +16,16 @@ namespace REST__ASP.NET_Web_API
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            config.Routes.MapHttpRoute(
-            name: "MyRoute",
-           routeTemplate: "api/{controller}/{year}/{month}/{day}",
-           defaults: new {
-               year= RouteParameter.Optional,
-               month = RouteParameter.Optional,
-               day = RouteParameter.Optional
+           // config.Routes.MapHttpRoute(
+           // name: "MyRoute",
+           //routeTemplate: "api/{controller}/{year}/{month}/{day}",
+           //defaults: new {
+           //    year= RouteParameter.Optional,
+           //    month = RouteParameter.Optional,
+           //    day = RouteParameter.Optional
 
-           }
-           );
+           //}
+           //);
         }
     }
 }
